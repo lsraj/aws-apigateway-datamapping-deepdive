@@ -25,12 +25,6 @@
 | Security Features	| IAM, Cognito	| IAM, Cognito	| IAM, API keys, WAF, Cognito	| IAM, VPC endpoints, resource policies |
 
 
-
-
-
-
-
-
 ## Service integration:
 
 It is most common to configure the API Gateway to invoke a Lambda function. However, we can often skip this Lambda
@@ -108,12 +102,12 @@ Any API in the API Gateway can have several resources, and each resource can hav
 Finally, each resource with a method has a unique integration on the API Gateway.
 
 Now, what does that mean? The API has one base URL for invoking an API, but there are several
-endpoints in there. AN example Hello World API endpoint looks like https://{baseurl}/hello.
+endpoints in there. AN example Hello World API endpoint looks like ```https://{baseurl}/hello```.
 
-Here, hello is the resource. We can have several endpoints in the same API. For example,
-with https://{baseurl}, https://{baseurl}/res1, https://{baseurl}/res1/res2, and so on.
-Each endpoint can provide different HTTP methods (GET, POST, PUT, DELETE, PATCH, and OPTIONS).
-Thus, we can have six ways to invoke the https://{baseurl}/hello endpoint.
+Here, ```hello``` is the resource. We can have several endpoints in the same API. For example,
+with ```https://{baseurl}, https://{baseurl}/res1, https://{baseurl}/res1/res2```, and so on.
+Each endpoint can provide different HTTP methods (```GET, POST, PUT, DELETE, PATCH, and OPTIONS```).
+Thus, we can have six ways to invoke the ```https://{baseurl}/hello``` endpoint.
 
 
 ## Integration:
