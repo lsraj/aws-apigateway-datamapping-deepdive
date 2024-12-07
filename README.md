@@ -7,11 +7,21 @@ I have used HTTP integration type for this exercise. Also used 3rd party URLs in
 
 ## Passing query params to HTTP integration request
 
-GET request on ```/v1/api/agify?n=string``` is mapped to```https://api.agify.io?name="string"```.
+GET request on ```/v1/api/agify?n=string``` is mapped to ```https://api.agify.io?name="string"```.
 This is achieved by URL query string parameters mapping in the integration part: ```method.request.querystring.n``` to ```name```.
 ```https://api.agify.io?name=string``` returns some fake age about name which is very useful for testing purposes. For example,
 sending GET request on ```https://api.agify.io/?name=tiger``` returns ```{"count":4679,"name":"tiger","age":57}```
+
     
+## Passing path params to HTTP integration request
+
+GET request on ```/v1/api/{ip}``` is mapped to ``` https://ipinfo.io/{ip}/geo ```. This is achieved by URL path params mapping in the integration part:
+```method.request.path.ip``` to ```ip```.
+
+## integration request Template body mapping
+GET request on ```/v1/api/ipgoe``` sends POST request to ```https://public.krazyminds.com/ipinfo``` with body template mapping as: ```{
+"ip": "$context.identity.sourceIp"}```.
+
 
 ## References
 
