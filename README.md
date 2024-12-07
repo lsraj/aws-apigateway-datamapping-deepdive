@@ -1,7 +1,7 @@
 # AWS API Gateway Data Mapping Deep Drive
 
-AWS API Gateway Data Mapping Deep Dive using Terraform
-
+Deep dive on data mapping from method request to integration method request and vice versa. Path params, query params,
+headers and body mapping is explored. Body mapping is done with Apache VTL (Velocity Template Language).
 
 
 ## References
