@@ -180,6 +180,12 @@ resource "aws_api_gateway_deployment" "apigateway_deploy" {
       aws_api_gateway_method_response.ipinfo_ip_resp.id,
       aws_api_gateway_integration_response.ipinfo_ip_integration_resp.id,
       aws_api_gateway_integration.ipinfo_ip_integration.id,
+
+      aws_api_gateway_resource.v1_api_ipgeo.id,
+      aws_api_gateway_method.ipgeo.id,
+      aws_api_gateway_method_response.ipgeo_resp.id,
+      aws_api_gateway_integration.ipgeo_integration.id,
+      aws_api_gateway_integration_response.ipgeo_integration_resp.id
     ]))
   }
 
