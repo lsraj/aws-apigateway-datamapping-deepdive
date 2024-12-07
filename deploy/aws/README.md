@@ -9,15 +9,25 @@
 4) **REST API Private**: Use when you need to create private APIs that should only be accessed from within a VPC or by internal resources, like EC2 instances or Lambda functions inside the VPC.
 
 
-Comparison Summary:
-Feature	HTTP API	WebSocket API	REST API (Public)	REST API Private
-Best For	Simple RESTful APIs with low latency	Real-time, bidirectional communication	Full-featured REST APIs with CRUD ops	Secure internal APIs within a VPC
-Protocols	HTTP/HTTPS	WebSocket	HTTP/HTTPS	HTTP/HTTPS
-Use Cases	Mobile/Web apps, microservices	Chat apps, real-time notifications, live updates	CRUD-based applications, integrations	Internal APIs within VPC, private services
-Integration with Lambda	Yes	Yes	Yes	Yes
-Latency	Low	Very low (real-time)	Medium (due to advanced features)	Medium (private endpoints)
-Authorization	JWT, Cognito	JWT, Cognito	IAM, Lambda Authorizer, API Keys, Custom Authorizers	IAM, Lambda Authorizer, VPC-specific access
-Cost	Lower (simpler)	Higher (due to persistent connections)	Higher (due to more advanced features)	Higher (due to VPC integration)
+**Comparison Summary**:
+
+| Feature/Attribute	| HTTP API	| WebSocket API	| REST API (Public)	| REST API (Private)
+| ---- | ---- | ---- | ---- | ---- |
+| Use Case	| Lightweight APIs, CRUD operations	| Real-time, two-way communication	| Full-featured REST APIs for public-facing services	| Private APIs within a VPC
+| Protocol	| HTTP/HTTPS	| WebSocket	| HTTP/HTTPS| 	HTTP/HTTPS |
+| Cost	| Lowest	| Higher (due to persistent connections)	| Higher than HTTP API (due to features)	| Similar to public REST API |
+| Authentication	| IAM, JWT, Cognito	| IAM, JWT, Cognito	| IAM, API keys, Cognito	| IAM, VPC endpoint, resource policies |
+| Integration	| Lambda, HTTP endpoints, AWS services	| Lambda, DynamoDB, SQS, SNS	| Lambda, AWS services, HTTP endpoints	| Lambda, VPC resources (EC2, RDS) |
+| Real-time Communication	| No	| Yes	| No	| No |
+| API Keys & Usage Plans	| No	| No	| Yes	| Yes |
+| Routing	| Basic routing (path and method)	| Connection-based routing	| Advanced routing, method-based	| Advanced routing, method-based |
+| Monitoring & Metrics	| Basic (CloudWatch logs)	| Limited	| Full (CloudWatch, API Gateway Metrics)	| Full (CloudWatch, API Gateway Metrics) |
+| Security Features	| IAM, Cognito	| IAM, Cognito	| IAM, API keys, WAF, Cognito	| IAM, VPC endpoints, resource policies |
+
+
+
+
+
 
 
 
