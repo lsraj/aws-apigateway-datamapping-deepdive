@@ -1,8 +1,15 @@
 # AWS API Gateway Data Mapping Deep Drive
 
-Deep dive on data mapping from method request to integration method request and vice versa. Path params, query params,
-headers and body mapping is explored. Body mapping is done with Apache VTL (Velocity Template Language).
+Deep dive on data mapping to/from integration methods. Path params, query params, headers and body mapping is explored.
+Body mapping is done with Apache VTL (Velocity Template Language).
 
+I have used HTTP integration type for this exercise. Also used 3rd party URLs in the HTTP integration endpoint URLs.
+
+## Passing query params to HTTP integration request
+
+GET request on ```/v1/api/agify?n=string``` is mapped to```https://api.agify.io?name="string"```.
+This is achieved by URL query string parameters mapping in the integration part: ```method.request.querystring.n``` to ```name```.
+```https://api.agify.io?n=string``` returns some fake info about name which is very useful for testing purposes.
 
 ## References
 
