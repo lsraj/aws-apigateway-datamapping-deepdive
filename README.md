@@ -19,8 +19,8 @@ GET request on ```/v1/api/{ip}``` is mapped to ``` https://ipinfo.io/{ip}/geo ``
 ```method.request.path.ip``` to ```ip```.
 
 ## integration request Template body mapping
-GET request on ```/v1/api/ipgoe``` sends POST request to ```https://public.krazyminds.com/ipinfo``` with body template mapping as: ```{
-"ip": "$context.identity.sourceIp"}```.
+GET request on ```/v1/api/ipgoe``` sends POST request to ```https://public.krazyminds.com/ipinfo``` with body template mapping as: 
+```{"ip": "$context.identity.sourceIp"}```.
 
 
 ## References
