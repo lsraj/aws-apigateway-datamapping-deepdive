@@ -3,10 +3,10 @@
 
 ## API types
 
-1) HTTP API: Use for lightweight, low-latency APIs when you don’t need the full feature set of REST APIs (for example, simple CRUD APIs for mobile apps or microservices).
-2) WebSocket API: Use when your application needs real-time, full-duplex communication, like a messaging app or live data updates.
-3) REST API: Use for feature-rich RESTful APIs that require advanced capabilities like custom authorizers, API keys, request/response transformation, caching, etc.
-4) REST API Private: Use when you need to create private APIs that should only be accessed from within a VPC or by internal resources, like EC2 instances or Lambda functions inside the VPC.
+1) **HTTP API**: Use for lightweight, low-latency APIs when you don’t need the full feature set of REST APIs (for example, simple CRUD APIs for mobile apps or microservices).
+2) **WebSocket API**: Use when your application needs real-time, full-duplex communication, like a messaging app or live data updates.
+3) **REST API**: Use for feature-rich RESTful APIs that require advanced capabilities like custom authorizers, API keys, request/response transformation, caching, etc.
+4) **REST API Private**: Use when you need to create private APIs that should only be accessed from within a VPC or by internal resources, like EC2 instances or Lambda functions inside the VPC.
 
 
 Comparison Summary:
